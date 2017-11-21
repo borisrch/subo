@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/weather-icons.min.css" rel="stylesheet">
+  <link href="css./layout.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/weather.js"></script>
+
+  <title>Weather + Timer</title>
+</head>
+
+<body>
+  <main>
+    <div class="justify-content-center" id="ContainerBg">
+    <div class="d-flex flex-column justify-content-center text-center" id="ContainerMain">
+      <div class="p-1" id="CityNameLabel"></div>
+      <div class="p-1" id="LocalLabel"></div>
+        <div class="d-flex flex-row justify-content-center text-center" id="ContainerTemp">
+          <div class="p-1" id="TempLabel"></div>
+          <div class="p-1"id="Degree"></div>
+          <div class="p-2" id="TempIcon"></div>
+        </div>
+      <div class="p-0" id="ConditionLabel"></div>
+      <div class="p-0" id="WindConditionLabel"></div>
+    </div>
+  </div>
+  </main>
+
+  <div class="justify-content-center text-center" id="Timer">
+  </div>
+
+  </body>
+</html>
