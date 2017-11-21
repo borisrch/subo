@@ -40,3 +40,8 @@
   font-weight: bold;
   padding: 50px;
 }
+
+#Soil {
+  background: linear-gradient(0deg, #603813, #8B5F40);
+  padding: 110px;
+}
