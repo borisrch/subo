@@ -26,7 +26,6 @@ function callbackFunction(data) {
   country = data.country_name;
 
   getWeather();
-  append();
 
 }
 
@@ -60,18 +59,20 @@ function callWeather(data) {
 
   $('#TempLabel').append(celsius);
   $('#Degree').append('°');
-  $('#CityNameLabel').append(city + ', ' + region);
+
+  if (region != "null") {
+      $('#CityNameLabel').append(city + ', ' + region);
+  } else {
+      $('#CityNameLabel').append(city);
+  }
+
+
   $('#LocalLabel').append(local);
   $('#WindConditionLabel').append(windCondition);
 
   $('#min').append(minCelsius + ' °C');
   $('#max').append(maxCelsius + ' °C');
 
-}
-
-function append() {
-  $('#greet').append(user + '!');
-  $('#latitude').append(lat);
 }
 
 function convertC(number) {
