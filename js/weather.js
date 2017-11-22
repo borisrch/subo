@@ -9,6 +9,11 @@ var conditionDesc;
 var user;
 var windCondition;
 var iconTag;
+var conditionID;
+var dn;
+
+var now = new Date();
+var currentHour = now.getHours();
 
 $.getJSON('https://ipapi.co/json/', callbackFunction);
 
@@ -32,7 +37,10 @@ function callWeather(data) {
 
   condition = data.weather[0].main;
   conditionDesc = data.weather[0].description;
-  iconTag = getWeatherIcon(conditionDesc);
+  conditionID = data.weather[0].id;
+  console.log(conditionDesc);
+  console.log(conditionID);
+  iconTag = conditionID;
 
   celsius = convertC(data.main.temp);
   minCelsius = convertC(data.main.temp_min);
@@ -43,8 +51,10 @@ function callWeather(data) {
 
   local = data.name;
 
+  dn = checkTime(currentHour);
+
   $('#ConditionLabel').append(condition);
-  $('#TempIcon').append('<i class="wi ' + iconTag + '"></i>');
+  $('#TempIcon').append('<i class="wi wi-owm-' + dn + '-' + iconTag + '"></i>');
 
   $('#TempLabel').append(celsius);
   $('#Degree').append('°');
@@ -128,7 +138,7 @@ function beaufort(number) {
 
   return result;
 }
-
+/**
 function getWeatherIcon(desc) {
   var icon;
 
@@ -144,6 +154,8 @@ function getWeatherIcon(desc) {
     case "few clouds":
     icon = "wi-day-cloudy";
     break;
+
+    case "overcast clouds":
 
     case "shower rain":
     icon = "wi-day-showers";
@@ -168,21 +180,33 @@ function getWeatherIcon(desc) {
 
   return icon;
 }
+**/
 
 var countDownDate = new Date("Dec 20, 2017 17:00:00").getTime();
 
 var x = setInterval(function() {
-var now = new Date().getTime();
 var distance = countDownDate - now;
 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-document.getElementById("Timer").innerHTML = days + " days " + hours + " hours "
-+ minutes + " minutes " + seconds + " seconds.";
+document.getElementById("Timer").innerHTML = days + " d " + hours + " h "
++ minutes + " m " + seconds + " s.";
 
    if (distance < 0) {
         clearInterval(x);
         document.getElementById("Timer").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+function checkTime(time) {
+  var dn;
+
+  if (time > 6 && time < 18) {
+    dn = "day";
+  } else {
+    dn = "night";
+  }
+
+  return dn;
+}
