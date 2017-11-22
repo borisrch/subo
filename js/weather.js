@@ -13,6 +13,7 @@ var conditionID;
 var dn;
 
 var now = new Date();
+var nowTime = now.getTime();
 var currentHour = now.getHours();
 
 $.getJSON('https://ipapi.co/json/', callbackFunction);
@@ -185,7 +186,7 @@ function getWeatherIcon(desc) {
 var countDownDate = new Date("Dec 20, 2017 17:00:00").getTime();
 
 var x = setInterval(function() {
-var distance = countDownDate - now;
+var distance = countDownDate - nowTime;
 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
