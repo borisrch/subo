@@ -53,6 +53,7 @@ function callWeather(data) {
   local = data.name;
 
   dn = checkTime(currentHour);
+  console.log(dn);
 
   $('#ConditionLabel').append(condition);
   $('#TempIcon').append('<i class="wi wi-owm-' + dn + '-' + iconTag + '"></i>');
