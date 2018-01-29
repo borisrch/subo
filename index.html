@@ -2,37 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/weather-icons.min.css" rel="stylesheet">
-  <link href="css/layout.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/weather.js"></script>
-
-  <title>Weather + Timer</title>
+  <title>Subo 2</title>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <script src="subo-2.0.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/weather-icons.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 
 <body>
-  <main>
-    <div class="justify-content-center" id="ContainerBg">
-    <div class="d-flex flex-column justify-content-center text-center" id="ContainerMain">
-      <div class="p-1" id="CityNameLabel"></div>
-      <div class="p-1" id="LocalLabel"></div>
-        <div class="d-flex flex-row justify-content-center text-center" id="ContainerTemp">
-          <div class="p-1" id="TempLabel"></div>
-          <div class="p-1"id="Degree"></div>
-          <div class="p-2" id="TempIcon"></div>
-        </div>
-      <div class="p-0" id="ConditionLabel"></div>
-      <div class="p-0" id="WindConditionLabel"></div>
+  <div class="skydrop">
+  <main class="bg" id="bg-main"> 
+    <div class="mini" id="mini">change sky</div>
+    <div class="container" id="main">
+      <div class="item city" id="city"></div>
+      <div class="item temp" id="temp"></div>
+      <div class="item tempIcon" id="tempIcon"></div>
+      <div class="item condition" id="condition"></div>
+      <div class="item windCondition" id="windCondition"></div>
     </div>
-  </div>
+    <div class="container" id="alt">
+      <div class="item city" id="cityALT"> </div>
+      <div class="item temp" id="tempALT"> </div>
+      <div class="item tempIcon" id="tempIconALT"> </div>
+      <div class="item condition" id="conditionALT"> </div>
+      <div class="item windCondition" id="windConditionALT"> </div>    
+    </div>   
   </main>
+  <div id="white-bg">
+      <div class="query-container" id="query">
+        <div class="item label">Add a city or address:</div>
+        <div class="item searchField">
+          <input type="text" id="search" value="Dublin" onfocus="if (this.value=='Dublin') this.value='';">
+        </div>
+        <div class="item buttonField">
+          <input type="button" class="button-go" value="Go">
+        </div>
+        <div class="item label">
+          <object class="load" id="load" type="image/svg+xml" data="load.svg">
+            Your browser does not support SVG
+          </object>
+        </div>
+      </div>
+    </div>
+      <hr> 
+</div>
 
-  <div class="justify-content-center text-center" id="Timer"></div>
-  <div class="justify-content-center text-center" id="Soil"></div>
+<footer>
+  <div id="preload-01"></div>
+  <div id="preload-02"></div>
+  <div id="preload-03"></div>
+  <div id="preload-04"></div>
+  <div id="preload-09"></div>
+  <div id="preload-06"></div>
+  <div id="preload-07"></div>
+  <div id="preload-08"></div>
+</footer>
 
-  </body>
+</body>
 </html>
