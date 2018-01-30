@@ -155,7 +155,8 @@ html {
     color: #3d464d;
     background-color: #fafafa;
     -webkit-font-smoothing: antialiased;
-
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 hr {
