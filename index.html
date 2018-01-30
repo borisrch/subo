@@ -10,57 +10,65 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/weather-icons.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
-
 <body>
   <div class="skydrop">
-  <main class="bg" id="bg-main"> 
-    <div class="mini" id="mini">change sky</div>
-    <div class="container" id="main">
-      <div class="item city" id="city"></div>
-      <div class="item temp" id="temp"></div>
-      <div class="item tempIcon" id="tempIcon"></div>
-      <div class="item condition" id="condition"></div>
-      <div class="item windCondition" id="windCondition"></div>
+    <main class="bg" id="bg-main">
+      <div class="mini"><i class="fa fa-th-large mini-icon" id="mini" aria-hidden="true"></i></div>
+      <div class="container" id="main">
+        <div class="item city" id="city"></div>
+        <div class="item temp" id="temp"></div>
+        <div class="item tempIcon" id="tempIcon"></div>
+        <div class="item condition" id="condition"></div>
+        <div class="item windCondition" id="windCondition"></div>
+      </div>
+      <div class="container" id="alt">
+        <div class="item city" id="cityALT"> </div>
+        <div class="item temp" id="tempALT"> </div>
+        <div class="item tempIcon" id="tempIconALT"> </div>
+        <div class="item condition" id="conditionALT"> </div>
+        <div class="item windCondition" id="windConditionALT"> </div>
+      </div>
+    </main>
+    <div id="white-bg">                      
+        <div class="query-container" id="query">
+            <div class="item query-label"><i class="fa fa-search" aria-hidden="true"></i> Add a city or address:</div>  
+            <div class="item searchField">
+              <input type="text" id="search" value="Dublin" onfocus="if (this.value=='Dublin') this.value='';"></div>         
+            <div class="item buttonField">
+              <button type="button" class="button-go">Go</button></div>
+            <div class="item">
+              <object class="load" id="load" type="image/svg+xml" width="30" height="30" data="tail-spin.svg">            
+              </object>
+            </div>            
+        </div>
     </div>
-    <div class="container" id="alt">
-      <div class="item city" id="cityALT"> </div>
-      <div class="item temp" id="tempALT"> </div>
-      <div class="item tempIcon" id="tempIconALT"> </div>
-      <div class="item condition" id="conditionALT"> </div>
-      <div class="item windCondition" id="windConditionALT"> </div>    
-    </div>   
-  </main>
-  <div id="white-bg">
-      <div class="query-container" id="query">
-        <div class="item label">Add a city or address:</div>
-        <div class="item searchField">
-          <input type="text" id="search" value="Dublin" onfocus="if (this.value=='Dublin') this.value='';">
-        </div>
-        <div class="item buttonField">
-          <input type="button" class="button-go" value="Go">
-        </div>
-        <div class="item label">
-          <object class="load" id="load" type="image/svg+xml" data="load.svg">
-            Your browser does not support SVG
-          </object>
-        </div>
+  
+  <footer>
+    <div class="border"></div>   
+    <div id="grey-bg">
+      <div class="text-container">
+        <div class="item text-label" style="text-align: end;"><p class="link">made by <u>Boris Chan</u></p></div>
+        <div class="item text-label" style="text-align: center;"><p class="link">read faq</p></div>
+        <div class="item text-label"> <p class="link">view <i class="fa fa-code" aria-hidden="true"></i> on <u>Github</u></p></div>
+      </div>
+      <div class="icon-container">
+          <div class="item text-icon" style="text-align: end;"><i class="fa fa-linkedin link" aria-hidden="true"></i></div>
+          <div class="item text-icon"><a href="mailto:borisc1996@gmail.com"><i class="fa fa-envelope link" aria-hidden="true"></i></a></div>
       </div>
     </div>
-      <hr> 
+  </footer>
 </div>
-
-<footer>
   <div id="preload-01"></div>
-  <div id="preload-02"></div>
+  <div id="preload-05"></div>
   <div id="preload-03"></div>
   <div id="preload-04"></div>
   <div id="preload-09"></div>
   <div id="preload-06"></div>
   <div id="preload-07"></div>
   <div id="preload-08"></div>
-</footer>
-
 </body>
+
 </html>

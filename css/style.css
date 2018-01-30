@@ -6,7 +6,7 @@ body {
 .bg {
     width: 100%;
     /**background: radial-gradient(circle at 50% 120%, #CC95C0, #DBD4B4 20%, rgb(125, 171, 228));**/
-    background-image: url("../assets/5.jpg"); 
+    background-image: url("../assets/2.png"); 
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,12 +21,11 @@ body {
     grid-template-rows: auto;
     justify-items: center;
     color: black;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .item {
-    /**border: 2px dashed rgb(255, 0, 0);**/    
+    /**border: 2px dashed rgb(255, 0, 0);   **/
 }
 
 .city {
@@ -66,34 +65,40 @@ body {
 
 .query-container {
     display: grid;
+    grid-template-columns: minmax(200px, 5fr) 80px minmax(80px, 4fr);
     padding: 15px;
-    padding-bottom: 0px;
+    padding-bottom: 30px;   
+    align-items: center;
+    visibility: hidden;    
     grid-gap: 5px;
-    grid-template-columns: 8fr 7fr;
-    justify-items: center;
-    padding-top: 25px;
-    visibility: hidden;
+}
+
+.query-label {
+    grid-column: span 3;
+    text-align: center;
+    padding: 10px;
 }
 
 #white-bg {
     background: white;
 }
 
+#grey-bg {
+    background: #fafafa;
+}
+
 .searchField {
-    width: 100%;
+    align-items: center;
     text-align: end;
-    padding: 10px;
 }
 
 .buttonField {
-    width: 100%;
-    text-align: start;
-    padding: 10px;
+    text-align: center;
 }
 
 .button-go {
     border: 2px solid #f35626;
-    padding: 0.75rem;
+    padding: 0.75em;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     font-weight: 700;
@@ -102,26 +107,32 @@ body {
     border-radius: 4px;
     text-align: center;
     font-size: 0.8em;
+    -webkit-appearance: none;
+    
+}
+
+.button-go:hover {
+    margin-top: -1px;
+    color: #fab112;
+    border: 2px solid #fab112;
+    
 }
 
 input[type='text'] {
     border: 2px solid #c0c8c9;
-    padding: 0.75rem;
+    padding: 0.75em;
     width: 140px;
     max-width: 75%;    
     display: inline-block;
     border-radius: 4px;
     font-size: 0.8em;
+    
   }
-
-.poop {
-    background: #BADA55;
-    grid-column: span 2;
-    grid-row: 1 / -1;
-}
 
 .load {
     visibility: hidden;
+    padding: 5px;
+    padding-top: 5px;
 }
 
 #main {
@@ -142,6 +153,7 @@ input[type='text'] {
 html {
     font: 100%/1.5 "Roboto", Verdana, sans-serif;
     color: #3d464d;
+    background-color: #fafafa;
     -webkit-font-smoothing: antialiased;
 
 }
@@ -165,17 +177,68 @@ hr {
 }
 
 .mini {
-    font-size: 0.75em;
+    font-size: 1.25em;
     text-align: end;
     padding: 10px;
-    padding-right: 20px;
+    padding-right: 20px;    
+}
+
+.mini-icon {
+    color: #ffffffde;
     cursor: pointer;
 }
-#preload-01 { background: url("../assets/1.jpg") no-repeat -9999px -9999px; }
-#preload-02 { background: url("../assets/2.jpg") no-repeat -9999px -9999px; }
-#preload-03 { background: url("../assets/3.jpg") no-repeat -9999px -9999px; }
-#preload-04 { background: url("../assets/4.jpg") no-repeat -9999px -9999px; }
-#preload-06 { background: url("../assets/6.jpg") no-repeat -9999px -9999px; }
-#preload-07 { background: url("../assets/7.jpg") no-repeat -9999px -9999px; }
-#preload-08 { background: url("../assets/8.jpg") no-repeat -9999px -9999px; }
-#preload-09 { background: url("../assets/9.jpg") no-repeat -9999px -9999px; }
+
+.mini-icon:hover {
+    color: #ffffff;
+}
+
+.border {
+    width: 100%;
+    height: 1px;
+    background: #e7e7e7;
+}
+
+.text-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-gap: 10px;
+    padding-top: 20px;
+}
+
+.text-label {
+    font-size: 0.75em;
+}
+
+footer {
+    bottom: 0;
+}
+
+.icon-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.link:hover {
+    color: #00BCD4;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
+/**
+    Default loading is sky 2. Remember to change subo.js as well.
+ **/
+
+#preload-01 { background: url("../assets/1.png") no-repeat -9999px -9999px; }
+#preload-05 { background: url("../assets/5.png") no-repeat -9999px -9999px; }
+#preload-03 { background: url("../assets/3.png") no-repeat -9999px -9999px; }
+#preload-04 { background: url("../assets/4.png") no-repeat -9999px -9999px; }
+#preload-06 { background: url("../assets/6.png") no-repeat -9999px -9999px; }
+#preload-07 { background: url("../assets/7.png") no-repeat -9999px -9999px; }
+#preload-08 { background: url("../assets/8.png") no-repeat -9999px -9999px; }
+#preload-09 { background: url("../assets/9.png") no-repeat -9999px -9999px; }
