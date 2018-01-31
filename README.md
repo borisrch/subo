@@ -23,8 +23,10 @@ Basically the app functions through a series of AJAX requests. First an api call
 The weather icons have a day or night variant depending on the time of day. Getting the client's time is simple enough, however getting a time from a location that the user searched was a bit more problematic. Google Maps Timezone API did the trick (though their `timestamp` request was a bit of a pain to do).
 
 ## To-Do List
+* Re-write XHR and implement with Promises.
+* Considering to add PWA elements.
 * Add a clock to both timezones.
 * Usability/visibility improvements.
 
-## Version
-2.1.1
+## Last Revised
+2018-01-30
