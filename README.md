@@ -1,6 +1,7 @@
 # Subo Weather
 
-Subo is a weather web app, that will check the weather around you and any place in the world. Subo is designed to be clean and lightweight.
+![mobile screenshot](https://i.imgur.com/PLKeymE.png "Mobile")
+![desktop screenshot](https://i.imgur.com/o7OptCi.png "Desktop")
 
 ## Features
 
